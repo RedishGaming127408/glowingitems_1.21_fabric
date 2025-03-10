@@ -17,7 +17,9 @@ jobs:
           java-version: '17'
 
       - name: Set up Gradle
-        uses: gradle/gradle-build-action@3
+        run: |
+          chmod +x gradlew
+          ./gradlew --version
 
       - name: Build Mod
         run: ./gradlew build
